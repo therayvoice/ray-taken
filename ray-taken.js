@@ -1,5 +1,5 @@
 const raytakenAuthors = "Ray Voice and Anna Voice";
-const raytakenVersion = "1.0.1";
+const raytakenVersion = "1.0.2";
 
 module.exports = {
   value: [],

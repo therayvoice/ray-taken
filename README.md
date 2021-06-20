@@ -14,7 +14,8 @@ const taken = require('ray-taken');
 ```
 
 # Usage
-```
+Example:
+```javascript
 const taken = require('ray-taken');
 
 const newArray = taken
