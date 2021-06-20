@@ -1,0 +1,28 @@
+{
+  "name": "ray-taken",
+  "version": "1.0.0",
+  "description": "A arguments extractor for ray-userland. Use this library to become careless about your arguments!",
+  "main": "ray-take.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ray6464/ray-taken.git"
+  },
+  "keywords": [
+    "arguments",
+    "extracter",
+    "ray-userland",
+    "ray",
+    "rayvoice",
+    "anna",
+    "annavoice"
+  ],
+  "author": "Ray Voice, Anna Voice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ray6464/ray-taken/issues"
+  },
+  "homepage": "https://github.com/Ray6464/ray-taken#readme"
+}
