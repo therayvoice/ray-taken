@@ -2,8 +2,14 @@ const taken = require('./ray-taken.min.js');
 
 Args = ["abcd", 1234, 12345, "abcde", "abc", 12, function x(){console.log("kle")}, function y(){console.log("Hale")}, {name:"ry", age:25}, {name:"anna", age:27}];
 
-ArgsB = [12345, "abcd", "abc", "Hale", "abcde"];
+ArgsB = [12345, "abcd", "abc", "Hale", "abcde", "/dale", "/hale"];
 
+let nodeArgs = taken
+  .take(ArgsB)
+  .getNodeNames()
+  .value;
+
+console.log(nodeArgs);
 
 let newArgs = taken
   .take(Args)

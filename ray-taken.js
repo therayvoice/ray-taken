@@ -1,5 +1,5 @@
 const raytakenAuthors = "Ray Voice and Anna Voice";
-const raytakenVersion = "1.0.3";
+const raytakenVersion = "1.0.5";
 
 module.exports = {
   value: [],
@@ -78,6 +78,11 @@ module.exports = {
     const numbers = this.getNumArgs().value;
     this.value = numbers.filter(item => (item > 1));
     //need to imporve this function
+    return this;
+  },
+  getNodeNames: function() {
+    const names = this.getStrArgs().value;
+    this.value = names.filter(item => (/^\//.test(item)));
     return this;
   }
 }

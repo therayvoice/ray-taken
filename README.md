@@ -57,7 +57,9 @@ Methods available:
 
 15. `getPortNums()`: Gets all the items of the "taken" Array that are port numbers.
 
-16. More comming soon!
+16. `getNodeNames()`: Gets all the items of the "taken" Array that are node names. Basically all strings that have "/" as the first character.
+
+17. More comming soon!
 
 To find the values of these methods use the `.value` property, all methods are chainable, hence return their parent object.
 

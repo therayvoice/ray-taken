@@ -1,10 +1,11 @@
 {
   "name": "ray-taken",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A arguments extractor for ray-userland. Use this library to become careless about your arguments!",
   "main": "ray-taken.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests.js",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
