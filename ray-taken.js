@@ -1,5 +1,5 @@
 const raytakenAuthors = "Ray Voice and Anna Voice";
-const raytakenVersion = "1.0.2";
+const raytakenVersion = "1.0.3";
 
 module.exports = {
   value: [],
@@ -50,20 +50,24 @@ module.exports = {
     this.value = regexedArray;
     return this;
   },
-  getNumArgs: function() {
+  getNumArgs: function(defaults) {
     this.value = this.getArgsOfType("number").value;
+    if (typeof(defaults) === "number") this.value.push(defaults);
     return this;
   },
-  getStrArgs: function() {
+  getStrArgs: function(defaults) {
     this.value = this.getArgsOfType("string").value;
+    if (typeof(defaults) === "string") this.value.push(defaults);
     return this;
   },
-  getFuncArgs: function() {
+  getFuncArgs: function(defaults) {
     this.value = this.getArgsOfType("function").value;
+    if (typeof(defaults) === "function") this.value.push(defaults);
     return this;
   },
-  getObjArgs: function() {
+  getObjArgs: function(defaults) {
     this.value = this.getArgsOfType("object").value;
+    if (typeof(defaults) === "object") this.value.push(defaults);
     return this;
   },
   getBoolArgs: function() {
