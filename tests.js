@@ -1,8 +1,27 @@
+//const taken = require('./ray-taken.js');
 const taken = require('./ray-taken.min.js');
 
 Args = ["abcd", 1234, 12345, "abcde", "abc", 12, function x(){console.log("kle")}, function y(){console.log("Hale")}, {name:"ry", age:25}, {name:"anna", age:27}];
 
-ArgsB = [12345, "abcd", "abc", "Hale", "abcde", "/dale", "/hale"];
+ArgsB = [12345, "abcd", "abc",
+         "Hale", "abcde", "/dale",
+	 "/hale", "vale/", "tail/",
+         "kale.exe"];
+
+let fileArgs = taken
+  .take(ArgsB)
+  .getFileNames()
+  .value;
+
+console.log(fileArgs);
+
+
+let dirArgs = taken
+  .take(ArgsB)
+  .getDirNames()
+  .value;
+
+console.log(dirArgs);
 
 let nodeArgs = taken
   .take(ArgsB)

@@ -1,6 +1,6 @@
 {
   "name": "ray-taken",
-  "version": "1.0.5",
+  "version": "1.2.0",
   "description": "A arguments extractor for ray-userland. Use this library to become careless about your arguments!",
   "main": "ray-taken.min.js",
   "scripts": {

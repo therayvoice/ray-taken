@@ -1,5 +1,5 @@
 const raytakenAuthors = "Ray Voice and Anna Voice";
-const raytakenVersion = "1.0.5";
+const raytakenVersion = "1.2.0";
 
 module.exports = {
   value: [],
@@ -83,6 +83,17 @@ module.exports = {
   getNodeNames: function() {
     const names = this.getStrArgs().value;
     this.value = names.filter(item => (/^\//.test(item)));
+    return this;
+  },
+  getDirNames: function() {
+    const names = this.getStrArgs().value;
+    this.value = names.filter(item => (/\/$/.test(item)));
+    return this;
+  },
+  getFileNames: function() {
+    const names = this.getStrArgs().value;
+    this.value = names.filter(item => !(/^\//.test(item)));
+    this.value = this.value.filter(item => !(/\/$/.test(item)));
     return this;
   }
 }

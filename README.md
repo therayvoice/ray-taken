@@ -59,7 +59,11 @@ Methods available:
 
 16. `getNodeNames()`: Gets all the items of the "taken" Array that are node names. Basically all strings that have "/" as the first character.
 
-17. More comming soon!
+17. `getDirNames()`: Gets all the items of the "taken" Array that are directory names. Basically all strings that have "/" as the last character.
+
+18. `getFileNames()`: Gets all the items of the "taken" Array that are file names. Basically all strings that have "/" character absent.
+
+19. More comming soon!
 
 To find the values of these methods use the `.value` property, all methods are chainable, hence return their parent object.
 
