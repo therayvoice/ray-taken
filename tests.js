@@ -6,7 +6,29 @@ Args = ["abcd", 1234, 12345, "abcde", "abc", 12, function x(){console.log("kle")
 ArgsB = [12345, "abcd", "abc",
          "Hale", "abcde", "/dale",
 	 "/hale", "vale/", "tail/",
-         "kale.exe"];
+         "kale.exe", "/home/ray/package.json", "/home/tail/node_modules/",
+         "D:\ray\tail.json", "C:\tail\ray.json"];
+
+let urlArgs = taken
+  .take(ArgsB)
+  .getAbsUnixPaths()
+  .value;
+
+console.log(urlArgs);
+
+let urlWinArgs = taken
+  .take(ArgsB)
+  .getAbsWinPaths()
+  .value;
+
+console.log(urlWinArgs);
+
+let absPaths = taken
+  .take(ArgsB)
+  .getAbsPaths()
+  .value;
+
+console.log(absPaths);
 
 let fileArgs = taken
   .take(ArgsB)
@@ -82,7 +104,4 @@ newArgs = taken
   .value;
 
 console.log(newArgs);
-
-
-
 

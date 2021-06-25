@@ -1,7 +1,6 @@
 # ray-taken
 A arguments extractor for ray-userland. Use this library to become careless about your arguments! A very good library to work with Arrays too!
 
-
 # Installation
 Use the following command to install with NPM:
 ```
@@ -27,43 +26,49 @@ console.log(newArray); // logs [1,2,3]
 ```
 
 Methods available:
-1. `logTypes`: Returns an Array of dataTypes available.
+1. `.logTypes`: Returns an Array of dataTypes available.
 
-2. `commonRegex`: Returns an Array of commonly used Regex Patterns.
+2. `.commonRegex`: Returns an Array of commonly used Regex Patterns.
 
-3. `take(myArray)`: Takes an array. Same as `taken.value = myArray`. We always need to take an array in question to begin working with it!
+3. `.take(myArray)`: Takes an array. Same as `taken.value = myArray`. We always need to take an array in question to begin working with it!
 
-4. `getArgsOfType(dataType)`: Takes a string like "number", "string", "function", "object", "undefined", etc. and returns all items of that data-type.
+4. `.getArgsOfType(dataType)`: Takes a string like "number", "string", "function", "object", "undefined", etc. and returns all items of that data-type.
 
-5. `overArray(Array, callback)`: Goes over each item of an array, passing the said item to the provided callback function.
+5. `.overArray(Array, callback)`: Goes over each item of an array, passing the said item to the provided callback function.
 
-6. `union(ArrayB)`: Performs the logical union operation on the "taken" Array and the provided "ArrayB". Like "AUB"!
+6. `.union(ArrayB)`: Performs the logical union operation on the "taken" Array and the provided "ArrayB". Like "AUB"!
 
-7. `subtraction(ArrayB)`: Performs the logical subtraction operation.
+7. `.subtraction(ArrayB)`: Performs the logical subtraction operation.
 
-8. `intersection(argsB)`: Performs the logical intersection operation.
+8. `.intersection(argsB)`: Performs the logical intersection operation.
 
-9. `getArgsOfRegex(regex)`: Gets all the items of the "taken" Array that match the provided "regex".
+9. `.getArgsOfRegex(regex)`: Gets all the items of the "taken" Array that match the provided "regex".
 
-10. `getNumArgs()`: Gets all the items of the "taken" Array that are numbers.
+10. `.getNumArgs()`: Gets all the items of the "taken" Array that are numbers.
 
-11. `getStrArgs()`: Gets all the items of the "taken" Array that are strings.
+11. `.getStrArgs()`: Gets all the items of the "taken" Array that are strings.
 
-12. `getFuncArgs()`: Gets all the items of the "taken" Array that are functions.
+12. `.getFuncArgs()`: Gets all the items of the "taken" Array that are functions.
 
-13. `getObjArgs()`: Gets all the items of the "taken" Array that are Objects, including `null` and other non-primitive dataTypes and non-functions (has a .call()).
+13. `.getObjArgs()`: Gets all the items of the "taken" Array that are Objects, including `null` and other non-primitive dataTypes and non-functions (has a .call()).
 
-14. `getBoolArgs()`: Gets all the items of the "taken" Array that are Booleans. 
+14. `.getBoolArgs()`: Gets all the items of the "taken" Array that are Booleans. 
 
-15. `getPortNums()`: Gets all the items of the "taken" Array that are port numbers.
+15. `.getPortNums()`: Gets all the items of the "taken" Array that are port numbers.
 
-16. `getNodeNames()`: Gets all the items of the "taken" Array that are node names. Basically all strings that have "/" as the first character.
+16. `.getNodeNames()`: Gets all the items of the "taken" Array that are node names. Basically all strings that have "/" as the first character.
 
-17. `getDirNames()`: Gets all the items of the "taken" Array that are directory names. Basically all strings that have "/" as the last character.
+17. `.getDirNames()`: Gets all the items of the "taken" Array that are directory names. Basically all strings that have "/" as the last character.
 
-18. `getFileNames()`: Gets all the items of the "taken" Array that are file names. Basically all strings that have "/" character absent.
+18. `.getFileNames()`: Gets all the items of the "taken" Array that are file names. Basically all strings that have "/" character absent.
 
-19. More comming soon!
+19. `.getAbsUnixPaths()`: Get all items of the "taken" Array that are absolute unix paths. Basically all strings that have "/home" as the first 5 characters. 
+
+20. `.getAbsWinPaths()`: Get all items of the "taken" Array that are absolute Windows paths. Basically all strings that have the first 2 characters like "C:", "D:", "E:", etc. 
+
+21. `.getAbsPaths()`: Get all items of the "taken" Array that are absolute paths. Basically a combination of `.getAbsUnixPaths()` and `.getAbsWinPaths()`.
+
+22. More comming soon!
 
 To find the values of these methods use the `.value` property, all methods are chainable, hence return their parent object.
 
@@ -89,3 +94,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
