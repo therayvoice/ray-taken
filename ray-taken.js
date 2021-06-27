@@ -5,7 +5,8 @@ module.exports = {
   value: [],
   logTypes: ["number", "string", "object", "function",
 	     "boolean", "undefined", "symbol", "bigint"],
-  commonRegex: [/\w/, /\d/, , /^\w/, /^http:/, /^https:/],
+  commonRegex: [/\w/, /\W/, /\d/, /\D/,
+	        /^\w/, /^http:/, /^https:/],
   take: function(argsArray) {
     this.value = argsArray;
     return this;
