@@ -91,6 +91,13 @@ module.exports = {
     this.value = names.filter(item => (/\/$/.test(item)));
     return this;
   },
+  getURINames: function() {
+    const fileNames = this.getFileNames().value;
+    const dirNames = this.getDirNames().value;
+    const absPaths = this.getAbsPath().value;
+    this.value = [...fileNames, ...dirNames, ...absPaths];
+    return this;
+  },
   getFileNames: function() {
     const names = this.getStrArgs().value;
     this.value = names.filter(item => !(/^\//.test(item)));
